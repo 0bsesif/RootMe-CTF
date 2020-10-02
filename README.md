@@ -67,8 +67,8 @@ Status:301 olarak belirttiği dizinler erisim yetkimizin `oldugu` dizinler
 ```
 ##### Php reverse shell indirmek ve düzenlemek:
 ----
+~Reverse Shelli [buradan](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) indirebilirsiniz.
 ```
-~Reverse Shelli [buradan](https://github.com/pentestmonkey/php-reverse-shell/) indirebilirsiniz.
 Php reverse shelli açıp tun0 ipimizi ve dinleycek portumuzu yazıyoruz.
 ```
 ##### php reverse shelli /panel adresine yüklemek:
