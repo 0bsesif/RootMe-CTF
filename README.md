@@ -1,4 +1,4 @@
-# RootMe CTF Write up
+# RootMe CTF Write up [TR]
 ---
 Selam Dostlar RootMe ctf çözümüyle karsınızdayım.
 
