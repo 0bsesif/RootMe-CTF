@@ -59,33 +59,37 @@ Status:301 olarak belirttiği dizinler erisim yetkimizin `oldugu` dizinler
 
 ##### Erisim yetkimizin olduğu dizinleri inceliyoruz:
 ------
-`/css dizininde home dizini ve /panel dizinin css kodları var.`
-`/js dizininde bir js kodu var.`
-`/panel dizininde bizi dosya yükleyebileceğimiz bir sayfa karşılıyor.`
-`/uploads dizini yüklenen dosyaların bulunduğu dizin`
-
+```
+/css dizininde home dizini ve /panel dizinin css kodları var.
+/js dizininde bir js kodu var.
+/panel dizininde bizi dosya yükleyebileceğimiz bir sayfa karşılıyor.
+/uploads dizini yüklenen dosyaların bulunduğu dizin
+```
 ##### Php reverse shell indirmek ve düzenlemek:
 ----
-`~Reverse Shelli [buradan](https://github.com/pentestmonkey/php-reverse-shell) indirebilirsiniz.`
-`Php reverse shelli açıp tun0 ipimizi ve dinleycek portumuzu yazıyoruz.`
-
+```
+~Reverse Shelli [buradan](https://github.com/pentestmonkey/php-reverse-shell/) indirebilirsiniz.
+Php reverse shelli açıp tun0 ipimizi ve dinleycek portumuzu yazıyoruz.
+```
 ##### php reverse shelli /panel adresine yüklemek:
 --------
-`Php reverse shell yüklemeye çalışıyoruz ama hata veriyor.`
-`Buradan php dosyalarını yüklemeyi kabul etmediğini görüyoruz.`
-`Bunu bypass etmek için uzatısını phtml olarak degistirip yüklüyoruz.`
-
+```
+Php reverse shell yüklemeye çalışıyoruz ama hata veriyor.`
+Buradan php dosyalarını yüklemeyi kabul etmediğini görüyoruz.`
+Bunu bypass etmek için uzatısını phtml olarak degistirip yüklüyoruz.`
+```
 ##### Shelli almaya calışıyoruz:
 -----
-`/uploads dizinine yuklenen dosyaların gittigini biliyorduk.`
-`Bizde yukledigimiz dosyanın buraya geldiğini görüyoruz.`
-`nc -lvnp (shelle yazdığımız port) yazarak portumuzu dinlemeye alıyoruz.`
-`/uploads dizinine yüklediğimiz shellin üzerine tıklıyoruz`
-`Ve Bağlantı Geliyor`
-
+```
+/uploads dizinine yuklenen dosyaların gittigini biliyorduk.
+Bizde yukledigimiz dosyanın buraya geldiğini görüyoruz.
+nc -lvnp (shelle yazdığımız port) yazarak portumuzu dinlemeye alıyoruz.
+/uploads dizinine yüklediğimiz shellin üzerine tıklıyoruz
+Ve Bağlantı Geliyor
+```
 ##### User flagı buluyoruz:
 ------
-`Hemen bulunduğumuz dizine ls çekiyoruz ve user flagı okuyoruz:```
+`Hemen bulunduğumuz dizine ls çekiyoruz ve user flagı okuyoruz:`
 
 ```
 $ cat user.txt
