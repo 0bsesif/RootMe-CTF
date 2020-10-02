@@ -65,13 +65,13 @@ Status:301 olarak belirttiği dizinler erisim yetkimizin `oldugu` dizinler
 /panel dizininde bizi dosya yükleyebileceğimiz bir sayfa karşılıyor.
 /uploads dizini yüklenen dosyaların bulunduğu dizin
 ```
-##### Php reverse shell indirmek ve düzenlemek:
+##### Php reverse shell indirmek ve düzenliyoruz:
 ----
 ~Reverse Shelli [buradan](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) indirebilirsiniz.
 ```
 Php reverse shelli açıp tun0 ipimizi ve dinleyeceğimiz portu yazıyoruz.
 ```
-##### php reverse shelli /panel adresine yüklemek:
+##### php reverse shelli /panel adresine yüklüyoruz:
 --------
 ```
 Php reverse shell yüklemeye çalışıyoruz ama hata veriyor.`
@@ -96,7 +96,7 @@ $ cat user.txt
 THM{xxxxxxxxxxxxxxx}
 ```
 
-##### Yetki Yükseltmek:
+##### Yetki Yükseltiyoruz:
 ---
 ```
 find / -user root -perm /4000 2>/dev/null
